@@ -13,6 +13,7 @@ import { CountryCityValidationDirective} from "./directives/country-city.directi
 import { TelephoneNumberValidatorDirective } from './directives/telephone-number-validator.directive';
 import { UniqueNameValidatorDirective } from './directives/unique-name-validator.directive';
 import { ReactiveFormValidation } from "./reactive-form-validation/reactive-form-validation";
+import { CustomValidatorsComponent } from './custom-validators/custom-validators.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { ReactiveFormValidation } from "./reactive-form-validation/reactive-form
         CountryCityValidationDirective,
         TelephoneNumberValidatorDirective,
         UniqueNameValidatorDirective,
-        ReactiveFormValidation
+        ReactiveFormValidation,
+        CustomValidatorsComponent
     ],
     imports: [
         BrowserModule,

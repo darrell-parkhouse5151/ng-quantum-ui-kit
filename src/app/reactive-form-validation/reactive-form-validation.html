@@ -1,0 +1,18 @@
+<form [formGroup]="simpleForm" (ngSubmit)="register(simpleForm)">
+    <div>
+        <label>name</label>
+        <input type="text" name="name" formControlName="name" placeholder="name">
+    </div>
+    <div>
+        <label>birth year</label>
+        <input type="text" name="name" formControlName="birthYear" placeholder="birth year">
+    </div>
+    <div formGroupName="location">
+        <h3>location</h3>
+        <div>
+            <label>Country</label>
+            <input tyep="text" name="country" formControlName="country" countryCity>
+            
+        </div>
+    </div>
+</form>
