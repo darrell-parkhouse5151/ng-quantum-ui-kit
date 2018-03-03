@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { AbstractControlDirective, AbstractControl } from "@angular/forms";
 
 @Component({
-    selector: 'app-show-errors',
+    selector: 'show-errors',
     templateUrl: './show-errors.component.html',
     styleUrls: ['./show-errors.component.scss']
 })
