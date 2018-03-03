@@ -14,6 +14,7 @@ import { TelephoneNumberValidatorDirective } from './directives/telephone-number
 import { UniqueNameValidatorDirective } from './directives/unique-name-validator.directive';
 import { ReactiveFormValidation } from "./reactive-form-validation/reactive-form-validation";
 import { CustomValidatorsComponent } from './custom-validators/custom-validators.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { CustomValidatorsComponent } from './custom-validators/custom-validators
         TelephoneNumberValidatorDirective,
         UniqueNameValidatorDirective,
         ReactiveFormValidation,
-        CustomValidatorsComponent
+        CustomValidatorsComponent,
+        NavbarComponent
     ],
     imports: [
         BrowserModule,
