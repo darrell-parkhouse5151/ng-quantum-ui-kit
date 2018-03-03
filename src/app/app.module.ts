@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ShowErrorsComponent } from './show-errors/show-errors.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowErrorsComponent
   ],
   imports: [
     BrowserModule
