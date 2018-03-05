@@ -67,4 +67,16 @@ export class CustomValidator {
 
         return isValidEmail ? null : message;
     }
+
+    static contactPhone(c:FormControl): ValidationErrors {
+        const isValidPhoneNumber = /^\d{3,3}-\d{3,3}-\d{3,3}$/.test(c.value);
+
+        const message = {
+            'contactPhone': {
+                'message': 'the phone number must be valid (xxx-xxx-xxxx, where x is a digit'
+            }
+        };
+
+        return isValidPhoneNumber ? null : message;
+    }
 }
