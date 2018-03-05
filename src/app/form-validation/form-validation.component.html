@@ -1,8 +1,0 @@
-<form #myForm="ngForm" (ngSubmit)="register(myForm)" novalidate>
-    <div ngModelGroup="location" #location="ngModelGroup" countryCity>
-        <app-show-errors [control]="location"></app-show-errors>
-    </div>
-</form>
-<form #simpleForm="ngForm" (ngSubmit)="register(simpleForm)" countryCity appTelephoneNumberValidator>
-
-</form>
