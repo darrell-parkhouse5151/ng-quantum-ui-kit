@@ -9,10 +9,10 @@ import { ShowErrorsComponent } from './show-errors/show-errors.component';
 import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from './navbar/navbar.component';
 import { VertNavComponent } from './vert-nav/vert-nav.component';
-import { DashboardComponent } from './navbar/dashboard/dashboard.component';
-import { LeadsComponent } from './navbar/dashboard/leads/leads.component';
-import { ContactsComponent } from './navbar/dashboard/contacts/contacts.component';
-import { EmailComponent } from './navbar/dashboard/email/email.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LeadsComponent } from './dashboard/leads/leads.component';
+import { EmailClientComponent } from './dashboard/email-client/email-client.component';
+import { ContactsComponent } from './dashboard/contacts/contacts.component';
 
 @NgModule({
     declarations: [
@@ -22,8 +22,8 @@ import { EmailComponent } from './navbar/dashboard/email/email.component';
         VertNavComponent,
         DashboardComponent,
         LeadsComponent,
+        EmailClientComponent,
         ContactsComponent,
-        EmailComponent
     ],
     imports: [
         BrowserModule,
