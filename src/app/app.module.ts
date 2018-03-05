@@ -2,7 +2,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { ShowErrorsComponent } from './show-errors/show-errors.component';
 
@@ -13,6 +12,31 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LeadsComponent } from './dashboard/leads/leads.component';
 import { EmailClientComponent } from './dashboard/email-client/email-client.component';
 import { ContactsComponent } from './dashboard/contacts/contacts.component';
+import {AngularFireModule} from 'angularfire2';
+import {environment} from '../environments/environment';
+import {HttpClientModule} from '@angular/common/http';
+import { RouterModule, Routes} from '@angular/router';
+import { ContactsService } from './services/contacts.service';
+import {AngularFirestore} from 'angularfire2/firestore';
+
+const appRoutes: Routes = [
+    {
+        path: '',
+        component: DashboardComponent,
+    },
+    {
+        path: 'dashboard/email',
+        component: EmailClientComponent
+    },
+    {
+        path: 'dashboard/contacts',
+        component: ContactsComponent
+    },
+    {
+        path: 'dashboard/leads',
+        component: LeadsComponent
+    }
+];
 
 @NgModule({
     declarations: [
@@ -27,9 +51,15 @@ import { ContactsComponent } from './dashboard/contacts/contacts.component';
     ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule,
+        RouterModule.forRoot(appRoutes),
+        AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
     ],
-    providers: [],
+    providers: [
+        ContactsService,
+        AngularFirestore,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
