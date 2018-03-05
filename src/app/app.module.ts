@@ -8,12 +8,14 @@ import { ShowErrorsComponent } from './show-errors/show-errors.component';
 
 import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from './navbar/navbar.component';
+import { VertNavComponent } from './vert-nav/vert-nav.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ShowErrorsComponent,
-        NavbarComponent
+        NavbarComponent,
+        VertNavComponent
     ],
     imports: [
         BrowserModule,
