@@ -1,0 +1,100 @@
+<div class="lead-card">
+    <div class="header">
+        <div class="btn">create lead</div>
+        <div class="v-sep"></div>
+        <div class="tool-bar">
+            <div class="selector">
+                <label>
+                    <input type="checkbox">
+                    <span class="label-text"></span>
+                </label>
+                <div class="down-arrow"></div>
+            </div><!-- selector --->
+            <div class="user">
+                <div class="user-icon"></div>
+            </div>
+            <div class="clock">
+                <div class="clock-tim-icon"></div>
+            </div>
+            <div class="update">
+                <div class="update-icon"></div>
+            </div>
+            <div class="delete">
+                <div class="delete-icon"></div>
+            </div>
+        </div> <!-- tool-bar --->
+        <div class="search">
+            <div class="search-input">
+                <input type="text" id="search-input" placeholder="Search">
+                <div class="search-icon"></div>
+            </div>
+        </div> <!-- search --->
+        <div class="settings-icon"></div>
+    </div> <!-- header --->
+
+    <div class="sidebar">
+        <nav class="lead-categories">
+            <ul class="category-list">
+                <li class="category-list-item active">All deals</li>
+                <li class="category-list-item">
+                    <div class="dot incoming"></div>
+                    Incoming Requests
+                </li>
+                <li class="category-list-item">
+                    <div class="dot initial"></div>
+                    Initial Contact
+                </li>
+                <li class="category-list-item">
+                    <div class="dot offer"></div>
+                    Offer Made
+                </li>
+                <li class="category-list-item">
+                    <div class="dot negotiations"></div>
+                    Negotiations
+                </li>
+                <li class="category-list-item">
+                    <div class="dot contract"></div>
+                    Contract
+                </li>
+                <li class="category-list-item">
+                    <div class="dot won"></div>
+                    Won Leads
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>Lead Title</th>
+                <th>Main Contact</th>
+                <th>Company</th>
+                <th>Lead Status</th>
+                <th>Sales</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let lead of leads">
+                <td>
+                    <label>
+                        <input type="checkbox">
+                        <span class="label-text"></span>
+                    </label>
+                </td>
+                <td>{{ lead.leadTitle }}</td>
+                <td>{{ lead.contactName }}</td>
+                <td>{{ lead.company }}</td>
+                <td>
+                    <div class="lead-status" [ngStyle]="{backgroundColor: lead.backgroundColor}">{{ lead.id }}</div>
+                    <input type="text" id="lead-status" value="{{ lead.id }}">
+                </td>
+                <td>{{ lead.sales | currency: "USD": "symbol"}}</td>
+                <!--<td>{{ getLeadStatus()}}</td>-->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
