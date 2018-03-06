@@ -18,6 +18,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
 import { ContactsService } from './services/contacts.service';
 import {AngularFirestore} from 'angularfire2/firestore';
+import { TestComponent } from './test/test.component';
 
 const appRoutes: Routes = [
     {
@@ -48,6 +49,7 @@ const appRoutes: Routes = [
         LeadsComponent,
         EmailClientComponent,
         ContactsComponent,
+        TestComponent,
     ],
     imports: [
         BrowserModule,
