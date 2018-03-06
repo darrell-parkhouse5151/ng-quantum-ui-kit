@@ -1,3 +1,4 @@
+@import "../../partials/vars";
 .lead-card {
     width: 100%;
     height: 510px;
@@ -31,7 +32,7 @@
                     float: left;
                     left: 10px;
                     top: 5px;
-                    //background: url(../../../assets/imgs/down-arrow.png) no-repeat;
+                    background: url(../../imgs/down-arrow.png) no-repeat;
                     width: 10px;
                     height: 6px;
                 }
@@ -52,7 +53,7 @@
 
             .user {
                 .user-icon {
-                    background: url(../../../assets/imgs/user-icon.png) no-repeat;
+                    background: url(../../imgs/user-icon.png) no-repeat;
                     width: 16px;
                     height: 16px;
                 }
@@ -60,7 +61,7 @@
 
             .clock {
                 left: 50px;
-                background: url(../../../assets/imgs/clock-time-icon.png) no-repeat;
+                background: url(../../imgs/clock-time-icon.png) no-repeat;
                 width: 21px;
                 height: 18px;
             }
@@ -69,7 +70,7 @@
                 left: 70px;
 
                 .update-icon {
-                    background: url(../../../assets/imgs/update.png) no-repeat;
+                    background: url(../../imgs/update.png) no-repeat;
                     width: 18px;
                     height: 14px;
                 }
@@ -79,7 +80,7 @@
                 left: 90px;
 
                 .delete-icon {
-                    background: url(../../../assets/imgs/delete-icon.png) no-repeat;
+                    background: url(../../imgs/delete-icon.png) no-repeat;
                     width: 14px;
                     height: 18px;
                 }
@@ -124,7 +125,7 @@
             position: absolute;
             right: 35px;
             top: 36px;
-            background: url(../../../assets/imgs/search-icon.png) no-repeat;
+            background: url(../../imgs/search-icon.png) no-repeat;
             width: 18px;
             height: 18px;
 
@@ -139,7 +140,7 @@
         top: 37px;
         right: 35px;
 
-        background: url(../../../assets/imgs/settings-icon.png) no-repeat;
+        background: url(../../imgs/settings-icon.png) no-repeat;
         width: 20px;
         height: 20px;
 
