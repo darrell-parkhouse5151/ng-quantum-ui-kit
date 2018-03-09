@@ -21,6 +21,8 @@ import {AngularFirestore} from 'angularfire2/firestore';
 import {LeadService} from './services/leads.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { TestComponent } from './test-component/test.component';
+import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
+import { AlertsComponent } from './alerts/alerts.component';
 
 const appRoutes: Routes = [
     {
@@ -38,6 +40,10 @@ const appRoutes: Routes = [
     {
         path: 'dashboard/leads',
         component: LeadsComponent
+    },
+    {
+        path: 'alerts',
+        component: AlertsComponent
     }
 ];
 
@@ -51,7 +57,9 @@ const appRoutes: Routes = [
         LeadsComponent,
         EmailClientComponent,
         ContactsComponent,
-        TestComponent
+        TestComponent,
+        LeadDetailsComponent,
+        AlertsComponent
     ],
     imports: [
         BrowserModule,
