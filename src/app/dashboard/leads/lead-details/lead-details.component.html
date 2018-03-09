@@ -1,0 +1,41 @@
+<div *ngIf="lead" class="lead-details-card">
+    <div class="card-header">
+        <h3>{{ lead.contactName }}</h3>
+    </div>
+    <div class="card-body">
+        <div class="left">
+            <div class="info">
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="sales">
+                <span
+                    [class.text-danger]="!hasSales"
+                    [class.text-success]="hasSales">
+                    {{ lead.sales | currency:"USD":"symbol" }}
+                </span>
+                <small>
+                    <a (click)="showSalesUpdateInput=!showSalesUpdateInput">
+                        <i class="fa fa-pencil"></i>
+                    </a>
+                </small>
+            </div>
+            <div class="clear"></div>
+            <form *ngIf="showSalesUpdateInput" (submit)="updateSales(id)">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="sales" [(ngModel)]="lead.sales" >
+                    <button class="btn btn-primary btn-sm" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+
+        <ul>
+            <li>{{ lead.company}}</li>
+            <li>{{ lead.sales }}</li>
+        </ul>
+    </div>
+</div>
+
+
+
