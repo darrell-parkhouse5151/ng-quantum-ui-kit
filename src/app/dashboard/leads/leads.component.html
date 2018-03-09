@@ -88,8 +88,7 @@
                 <td>{{ lead.contactName }}</td>
                 <td>{{ lead.company }}</td>
                 <td>
-                    <div class="lead-status" [ngStyle]="{backgroundColor: lead.backgroundColor}">{{ lead.id }}</div>
-                    <input type="text" id="lead-status" value="{{ lead.id }}">
+                    <div class="lead-status" [ngStyle]="{backgroundColor: lead.backgroundColor}">{{ lead.leadStatus }}</div>
                 </td>
                 <td>{{ lead.sales | currency: "USD": "symbol"}}</td>
                 <!--<td>{{ getLeadStatus()}}</td>-->
