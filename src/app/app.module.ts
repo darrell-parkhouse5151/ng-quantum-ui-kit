@@ -23,6 +23,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { TestComponent } from './test-component/test.component';
 import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
 import { AlertsComponent } from './alerts/alerts.component';
+import { AddLeadComponent } from './dashboard/leads/add-lead/add-lead.component';
 
 const appRoutes: Routes = [
     {
@@ -44,6 +45,10 @@ const appRoutes: Routes = [
     {
         path: 'alerts',
         component: AlertsComponent
+    },
+    {
+        path: 'lead/:id',
+        component: LeadDetailsComponent
     }
 ];
 
@@ -59,7 +64,8 @@ const appRoutes: Routes = [
         ContactsComponent,
         TestComponent,
         LeadDetailsComponent,
-        AlertsComponent
+        AlertsComponent,
+        AddLeadComponent
     ],
     imports: [
         BrowserModule,
