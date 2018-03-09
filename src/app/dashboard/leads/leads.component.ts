@@ -10,8 +10,7 @@ import { Lead } from '../../models/lead';
 })
 export class LeadsComponent implements OnInit {
     leads: Lead[];
-    
-    @ViewChild('leadStatusId') leadId;
+
     constructor(private leadService: LeadService) {
     }
 
