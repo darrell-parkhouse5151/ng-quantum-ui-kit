@@ -16,9 +16,10 @@ import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import {HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
-import { ContactsService } from './services/contacts.service';
+import { ContactService } from './services/contacts.service';
 import {AngularFirestore} from 'angularfire2/firestore';
-import { TestComponent } from './test/test.component';
+import {LeadService} from './services/leads.service';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 const appRoutes: Routes = [
     {
@@ -49,7 +50,6 @@ const appRoutes: Routes = [
         LeadsComponent,
         EmailClientComponent,
         ContactsComponent,
-        TestComponent,
     ],
     imports: [
         BrowserModule,
@@ -59,8 +59,10 @@ const appRoutes: Routes = [
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
     ],
     providers: [
-        ContactsService,
+        ContactService,
         AngularFirestore,
+        LeadService,
+        AngularFireDatabase
     ],
     bootstrap: [AppComponent]
 })
