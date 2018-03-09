@@ -74,6 +74,7 @@
                 <th>Company</th>
                 <th>Lead Status</th>
                 <th>Sales</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -91,6 +92,9 @@
                     <div class="lead-status" [ngStyle]="{backgroundColor: lead.backgroundColor}">{{ lead.leadStatus }}</div>
                 </td>
                 <td>{{ lead.sales | currency: "USD": "symbol"}}</td>
+                <td>
+                    <button routerLink="/lead/{{lead.id}}" class="btn btn-sm">details</button>
+                </td>
                 <!--<td>{{ getLeadStatus()}}</td>-->
             </tr>
             </tbody>
