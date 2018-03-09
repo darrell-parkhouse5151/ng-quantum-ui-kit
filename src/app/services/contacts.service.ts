@@ -5,14 +5,14 @@ import { Observable } from 'rxjs/Observable';
 import { Contact } from '../models/contact';
 
 @Injectable()
-export class ContactsService {
+export class ContactService {
     contactCollection: AngularFirestoreCollection<Contact>;
     contactDoc: AngularFirestoreDocument<Contact>;
     contacts: Observable<Contact[]>;
     contact: Observable<Contact>;
 
     constructor(private angularFirestore: AngularFirestore) {
-        this.contactCollection = this.angularFirestore.collection('contacts', ref => ref.orderBy('name', 'desc'));
+        this.contactCollection = this.angularFirestore.collection('contacts', ref => ref.orderBy('contact', 'desc'));
     }
 
     getContacts() : Observable<Contact[]> {
@@ -25,6 +25,7 @@ export class ContactsService {
         });
 
         return this.contacts;
+
     }
 
     newContact(contact: Contact) {
