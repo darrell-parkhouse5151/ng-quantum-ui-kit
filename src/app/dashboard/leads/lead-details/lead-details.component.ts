@@ -12,7 +12,8 @@ import {Lead} from '../../../models/lead';
 export class LeadDetailsComponent implements OnInit {
     id:string;
     lead: Lead;
-
+    hasSales: boolean = true;
+    showSalesUpdateInput: boolean = false;
     constructor(private leadService: LeadService,
                 private router: Router,
                 private route: ActivatedRoute) {
@@ -21,7 +22,11 @@ export class LeadDetailsComponent implements OnInit {
     ngOnInit() {
         this.id = this.route.snapshot.params['id'];
 
-        this.leadService.getLead(this.id).subscribe(lead => this.lead = lead;)
+        this.leadService.getLead(this.id).subscribe(lead => this.lead = lead);
+    }
+
+    updateSales() {
+        this.leadService.updateLead(this.lead);
     }
 
     onDelete() {
