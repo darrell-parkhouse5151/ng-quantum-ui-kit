@@ -20,6 +20,7 @@ import { ContactService } from './services/contacts.service';
 import {AngularFirestore} from 'angularfire2/firestore';
 import {LeadService} from './services/leads.service';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { TestComponent } from './test-component/test.component';
 
 const appRoutes: Routes = [
     {
@@ -50,6 +51,7 @@ const appRoutes: Routes = [
         LeadsComponent,
         EmailClientComponent,
         ContactsComponent,
+        TestComponent
     ],
     imports: [
         BrowserModule,
