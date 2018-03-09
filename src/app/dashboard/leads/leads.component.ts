@@ -1,5 +1,5 @@
 /* tslint:disable*/
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LeadService} from '../../services/leads.service';
 import { Lead } from '../../models/lead';
 
