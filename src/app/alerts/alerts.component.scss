@@ -1,0 +1,71 @@
+$error-text-color: #721C24;
+$error-bg-color: #F7D7DA;
+
+$success-text-color: #155724;
+$success-bg-color: #D4EDDA;
+
+$warning-text-color: #856404;
+$warning-bg-color: #FFF3CD;
+
+$info-text-color: #0C5460;
+$info-bg-color: #D1ECF1;
+
+$primary-text-color: #004085;
+$primary-bg-color: #CCE5FF;
+
+$default-text-color: #1B1E21;
+$default-bg-color: #D6D8D9;
+
+.alert-card {
+    width: 877px;
+    height: 332px;
+    background-color: #262626;
+    margin-top: 60px;
+    //padding: 51px 80px;
+    padding-top: 51px;
+    padding-left: 82px;
+}
+
+.alert {
+    width: 342px;
+    height: 59px;
+    font-size: 16px;
+    font-weight: bold;
+
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 27px;
+    padding: 20px 0 20px 20px;
+
+}
+
+.alert-error {
+    color: $error-text-color;
+    background-color: $error-bg-color;
+}
+
+.alert-warning {
+    color: $warning-text-color;
+    background-color: $warning-bg-color;
+}
+
+.alert-success {
+    color: $success-text-color;
+    background-color: $success-bg-color;
+}
+
+.alert-info {
+    color: $info-text-color;
+    background-color: $info-bg-color;
+}
+
+.alert-primary {
+    color: $primary-text-color;
+    background-color: $primary-bg-color;
+}
+
+.alert-default {
+    color: $default-text-color;
+    background-color: $default-bg-color;
+}
+
