@@ -1,6 +1,6 @@
 /* tslint:disable*/
 import { Component, OnInit } from '@angular/core';
-import { ContactsService } from '../../services/contacts.service';
+import { ContactService } from '../../services/contacts.service';
 import { Contact } from '../../models/contact';
 
 @Component({
@@ -11,11 +11,12 @@ import { Contact } from '../../models/contact';
 export class ContactsComponent implements OnInit {
     contacts: Contact[];
 
-    constructor(private contactsService: ContactsService) { }
+    constructor(private contactService: ContactService) { }
 
     ngOnInit() {
-        this.contactsService.getContacts().subscribe(contacts => {
+        this.contactService.getContacts().subscribe(contacts => {
             this.contacts = contacts;
+            console.log(contacts);
         })
     }
 
