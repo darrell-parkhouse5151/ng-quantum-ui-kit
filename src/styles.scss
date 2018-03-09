@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/partials/vars";
+
 * {
     margin: 0;
     padding: 0;
@@ -13,4 +15,46 @@ body {
 .container {
     width: 1110px;
     margin: 0 auto;
+}
+
+.btn {
+    width: 186px;
+    height: 50px;
+    float: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-weight: 900;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 4px;
+
+    position: relative;
+    top: 19px;
+    left: 20px;
+
+    background-color: $base-btn-bg;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+label {
+    cursor: pointer;
+    float: left;
+
+    input[type="checkbox"] {
+        display: none;
+        + .label-text {
+            &:before {
+                content: url(app/imgs/unchecked.png)
+            }
+        }
+        &:checked + .label-text {
+            &:before {
+                content: url(app/imgs/checked.png);
+            }
+        }
+    }
 }
