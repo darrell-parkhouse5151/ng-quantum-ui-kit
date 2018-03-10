@@ -24,6 +24,8 @@ import { TestComponent } from './test-component/test.component';
 import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { AddLeadComponent } from './dashboard/leads/add-lead/add-lead.component';
+import { ProdctDetailsComponent } from './ecommarce/prodct-details/prodct-details.component';
+import { ProductService } from './services/product.service';
 
 const appRoutes: Routes = [
     {
@@ -65,7 +67,8 @@ const appRoutes: Routes = [
         TestComponent,
         LeadDetailsComponent,
         AlertsComponent,
-        AddLeadComponent
+        AddLeadComponent,
+        ProdctDetailsComponent
     ],
     imports: [
         BrowserModule,
@@ -78,7 +81,8 @@ const appRoutes: Routes = [
         ContactService,
         AngularFirestore,
         LeadService,
-        AngularFireDatabase
+        AngularFireDatabase,
+        ProductService
     ],
     bootstrap: [AppComponent]
 })
