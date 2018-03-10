@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import {LeadService} from '../../../services/leads.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Lead} from '../../../models/lead';
-import {AngularFireDatabase} from 'angularfire2/database';
 
 @Component({
     selector: 'app-lead-details',
