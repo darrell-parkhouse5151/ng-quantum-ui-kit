@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {LeadService} from '../../../services/leads.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Lead} from '../../../models/lead';
+import {AngularFireDatabase} from 'angularfire2/database';
 
 @Component({
     selector: 'app-lead-details',
@@ -14,9 +15,11 @@ export class LeadDetailsComponent implements OnInit {
     lead: Lead;
     hasSales: boolean = true;
     showSalesUpdateInput: boolean = false;
+
     constructor(private leadService: LeadService,
                 private router: Router,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                ) {
     }
 
     ngOnInit() {
@@ -35,4 +38,7 @@ export class LeadDetailsComponent implements OnInit {
         }
     }
 
+    test() {
+        this.dbRef = this.afdb.database().ref
+    }
 }
