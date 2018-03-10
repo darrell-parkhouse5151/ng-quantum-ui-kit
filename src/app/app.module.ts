@@ -24,8 +24,10 @@ import { TestComponent } from './test-component/test.component';
 import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { AddLeadComponent } from './dashboard/leads/add-lead/add-lead.component';
-import { ProdctDetailsComponent } from './ecommarce/prodct-details/prodct-details.component';
 import { ProductService } from './services/product.service';
+import { ProductDetailsComponent } from './ecommarce/product-details/product-details.component';
+import { ProductAddComponent } from './ecommarce/product-add/product-add.component';
+import { ProductComponent } from './ecommarce/product/product.component';
 
 const appRoutes: Routes = [
     {
@@ -68,7 +70,9 @@ const appRoutes: Routes = [
         LeadDetailsComponent,
         AlertsComponent,
         AddLeadComponent,
-        ProdctDetailsComponent
+        ProductDetailsComponent,
+        ProductAddComponent,
+        ProductComponent,
     ],
     imports: [
         BrowserModule,
