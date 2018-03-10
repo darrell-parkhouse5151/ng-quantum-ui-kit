@@ -1,5 +1,5 @@
 /* tslint:disable*/
-export class Product {
+export class SimpleProduct {
     id:number;
     name:string;
     description:string;
