@@ -1,6 +1,6 @@
 /* tslint:disable*/
 import { Injectable } from '@angular/core';
-import { Product } from '../models/product';
+import { Product } from '../models/simple-product';
 import { LoggingService } from './logging.service';
 
 @Injectable()
