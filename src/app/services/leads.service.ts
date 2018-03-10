@@ -4,9 +4,6 @@ import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} 
 import {Observable} from "rxjs/Observable";
 import {Lead} from "../models/lead";
 
-
-
-
 @Injectable()
 export class LeadService {
     leadCollection: AngularFirestoreCollection<Lead>;
