@@ -6,6 +6,6 @@ export interface Lead {
     leadStatus:string;
     leadTitle:string;
     sales:number;
-    backgroundColor:string;
+    backgroundColor?:string;
 
 }
