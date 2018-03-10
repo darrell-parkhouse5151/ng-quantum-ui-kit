@@ -38,7 +38,7 @@ export class LeadDetailsComponent implements OnInit {
         }
     }
 
-    test() {
-        this.dbRef = this.afdb.database().ref
-    }
+    // test() {
+    //     this.dbRef = this.afdb.database().ref
+    // }
 }
