@@ -74,3 +74,26 @@ label {
         }
     }
 }
+
+label {
+    &.email-star {
+        cursor: pointer;
+        float: left;
+
+        input[type="checkbox"] {
+            display: none;
+
+            + .label-text {
+                &:before {
+                    content: url(app/imgs/email/star-unchecked.png)
+                }
+            }
+
+            &:checked + .label-text {
+                &:before {
+                    content: url(app/imgs/email/star-checked.png);
+                }
+            }
+        }
+    }
+}
