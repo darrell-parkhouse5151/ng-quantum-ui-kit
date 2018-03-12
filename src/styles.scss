@@ -97,3 +97,45 @@ label {
         }
     }
 }
+
+.breadcrumbs {
+    list-style: none;
+    color: $md-grey-text-color;
+    margin-top: 30px;
+    .bc-item {
+        float: left;
+        font-weight: 500;
+        font-size: 13px;
+    }
+}
+
+.bc-sep {
+    background: url(app/imgs/bc-arrow.png) no-repeat;
+    width: 5px;
+    height: 8px;
+    float: left;
+
+    margin: 5px 20px 0 20px;
+}
+
+.section-title {
+    display: block;
+    width: 100%;
+    font-size: 36px;
+    margin-top: 30px;
+    color: $light-text-color;
+}
+
+.clear {
+    clear: both;
+}
+
+.v-sep {
+    float: left;
+    width: 2px;
+    height: 88px;
+    background-color: $base-border-color;
+
+    position: relative;
+    left: 37px;
+}
