@@ -10,7 +10,8 @@ import { Contact } from '../../models/contact';
 })
 export class ContactsComponent implements OnInit {
     contacts: Contact[];
-
+    pageName:string = 'Contacts';
+    componentName: string = 'Client Contacts';
     constructor(private contactService: ContactService) { }
 
     ngOnInit() {
