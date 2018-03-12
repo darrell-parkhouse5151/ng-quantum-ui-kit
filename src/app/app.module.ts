@@ -5,22 +5,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ShowErrorsComponent } from './show-errors/show-errors.component';
 
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { VertNavComponent } from './vert-nav/vert-nav.component';
-import {AngularFireModule} from 'angularfire2';
-import {environment} from '../environments/environment';
-import {HttpClientModule} from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test-component/test.component';
-import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
-import { AlertsComponent } from './basic-elements/alerts/alerts.component';
 import { ProductDetailsComponent } from './ecommarce/product-details/product-details.component';
 import { ProductAddComponent } from './ecommarce/product-add/product-add.component';
 import { ProductComponent } from './ecommarce/product/product.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ServicesModule } from './services/services.module';
 import { BasicElementsComponent } from './basic-elements/basic-elements.component';
-import {BasicElementsModule} from './basic-elements/basic-elements.module';
+import { BasicElementsModule } from './basic-elements/basic-elements.module';
 
 
 @NgModule({
@@ -30,8 +28,6 @@ import {BasicElementsModule} from './basic-elements/basic-elements.module';
         NavbarComponent,
         VertNavComponent,
         TestComponent,
-        LeadDetailsComponent,
-        AlertsComponent,
         ProductDetailsComponent,
         ProductAddComponent,
         ProductComponent,
@@ -44,11 +40,10 @@ import {BasicElementsModule} from './basic-elements/basic-elements.module';
         HttpClientModule,
         ServicesModule,
         DashboardModule,
-        BasicElementsModule
+        BasicElementsModule,
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
     ],
-    providers: [
-    ],
+    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
