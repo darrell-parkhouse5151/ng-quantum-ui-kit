@@ -10,7 +10,8 @@ import { Lead } from '../../models/lead';
 })
 export class LeadsComponent implements OnInit {
     leads: Lead[];
-
+    pageName: string = 'Leads';
+    componentName: string = 'Client Leads';
     constructor(private leadService: LeadService) {
     }
 
