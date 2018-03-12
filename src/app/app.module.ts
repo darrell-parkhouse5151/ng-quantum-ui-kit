@@ -8,52 +8,27 @@ import { ShowErrorsComponent } from './show-errors/show-errors.component';
 import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from './navbar/navbar.component';
 import { VertNavComponent } from './vert-nav/vert-nav.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LeadsComponent } from './dashboard/leads/leads.component';
-import { EmailClientComponent } from './dashboard/email-client/email-client.component';
-import { ContactsComponent } from './dashboard/contacts/contacts.component';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import {HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
-import { ContactService } from './services/contacts.service';
-import {AngularFirestore} from 'angularfire2/firestore';
-import {LeadService} from './services/leads.service';
-import { AngularFireDatabase } from 'angularfire2/database';
 import { TestComponent } from './test-component/test.component';
 import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
-import { AlertsComponent } from './alerts/alerts.component';
-import { AddLeadComponent } from './dashboard/leads/add-lead/add-lead.component';
-import { ProductService } from './services/product.service';
+import { AlertsComponent } from './basic-elements/alerts/alerts.component';
 import { ProductDetailsComponent } from './ecommarce/product-details/product-details.component';
 import { ProductAddComponent } from './ecommarce/product-add/product-add.component';
 import { ProductComponent } from './ecommarce/product/product.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { ServicesModule } from './services/services.module';
+import { BasicElementsComponent } from './basic-elements/basic-elements.component';
 
 const appRoutes: Routes = [
-    {
-        path: '',
-        component: DashboardComponent,
-    },
-    {
-        path: 'dashboard/email',
-        component: EmailClientComponent
-    },
-    {
-        path: 'dashboard/contacts',
-        component: ContactsComponent
-    },
-    {
-        path: 'dashboard/leads',
-        component: LeadsComponent
-    },
+
     {
         path: 'alerts',
         component: AlertsComponent
     },
-    {
-        path: 'lead/:id',
-        component: LeadDetailsComponent
-    }
+
 ];
 
 @NgModule({
@@ -62,31 +37,23 @@ const appRoutes: Routes = [
         ShowErrorsComponent,
         NavbarComponent,
         VertNavComponent,
-        DashboardComponent,
-        LeadsComponent,
-        EmailClientComponent,
-        ContactsComponent,
         TestComponent,
         LeadDetailsComponent,
         AlertsComponent,
-        AddLeadComponent,
         ProductDetailsComponent,
         ProductAddComponent,
         ProductComponent,
+        BasicElementsComponent,
     ],
     imports: [
         BrowserModule,
         FormsModule,
+        DashboardModule,
         HttpClientModule,
-        RouterModule.forRoot(appRoutes),
+        ServicesModule,
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
     ],
     providers: [
-        ContactService,
-        AngularFirestore,
-        LeadService,
-        AngularFireDatabase,
-        ProductService
     ],
     bootstrap: [AppComponent]
 })
