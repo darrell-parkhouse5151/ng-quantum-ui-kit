@@ -11,7 +11,6 @@ import { VertNavComponent } from './vert-nav/vert-nav.component';
 import {AngularFireModule} from 'angularfire2';
 import {environment} from '../environments/environment';
 import {HttpClientModule} from '@angular/common/http';
-import { RouterModule, Routes} from '@angular/router';
 import { TestComponent } from './test-component/test.component';
 import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
 import { AlertsComponent } from './basic-elements/alerts/alerts.component';
@@ -21,15 +20,8 @@ import { ProductComponent } from './ecommarce/product/product.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ServicesModule } from './services/services.module';
 import { BasicElementsComponent } from './basic-elements/basic-elements.component';
+import {BasicElementsModule} from './basic-elements/basic-elements.module';
 
-const appRoutes: Routes = [
-
-    {
-        path: 'alerts',
-        component: AlertsComponent
-    },
-
-];
 
 @NgModule({
     declarations: [
@@ -51,6 +43,8 @@ const appRoutes: Routes = [
         DashboardModule,
         HttpClientModule,
         ServicesModule,
+        DashboardModule,
+        BasicElementsModule
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
     ],
     providers: [
