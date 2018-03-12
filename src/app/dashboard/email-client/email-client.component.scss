@@ -1,0 +1,24 @@
+@import "../../partials/vars";
+
+.email-client-card {
+    width: 100%;
+    height: 870px;
+    background-color: $base-dark-bg;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    .header {
+        width: 100%;
+        height: 88px;
+        border-bottom: 2px solid $base-border-color;
+    }
+
+    .sidebar {
+        width: 225px;
+        height: 782px;
+        border-right: 2px solid $base-border-color;
+        float: left;
+        color: $md-grey-text-color;
+    }
+}
