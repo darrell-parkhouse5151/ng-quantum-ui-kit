@@ -23,6 +23,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { ProfilesComponent } from './social/profiles/profiles.component';
 import { CartComponent } from './ecommerce/cart/cart.component';
 import { ShoppingCartComponent } from './ecommerce/shopping-cart/shopping-cart.component';
+import { CartService } from './services/cart.service';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ShoppingCartComponent } from './ecommerce/shopping-cart/shopping-cart.c
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
     ],
     providers: [
-        AngularFirestore
+        AngularFirestore,
+        CartService
     ],
     bootstrap: [AppComponent]
 })
