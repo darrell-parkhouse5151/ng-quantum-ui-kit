@@ -1,0 +1,11 @@
+<div class="form-group">
+    <label for="options">options:</label>
+    <div *ngFor="let option of options">
+        <label>
+            <input type="checkbox" name="options"
+                   id="options" value="{{option.value}}"
+                    [(ngModel)]="option.checked">
+
+        </label>
+    </div>
+</div>
