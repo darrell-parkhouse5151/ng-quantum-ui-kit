@@ -10,7 +10,6 @@ import { VertNavComponent } from './vert-nav/vert-nav.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { TestComponent } from './basic-elements/test-component/test.component';
 import { ProductDetailsComponent } from './ecommerce/product-details/product-details.component';
 import { ProductAddComponent } from './ecommerce/product-add/product-add.component';
 import { ProductComponent } from './ecommerce/product/product.component';
@@ -20,10 +19,11 @@ import { BasicElementsComponent } from './basic-elements/basic-elements.componen
 import { BasicElementsModule } from './basic-elements/basic-elements.module';
 import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { ProfilesComponent } from './social/profiles/profiles.component';
 import { CartComponent } from './ecommerce/cart/cart.component';
-import { ShoppingCartComponent } from './ecommerce/shopping-cart/shopping-cart.component';
 import { CartService } from './services/cart.service';
+import { StorageService } from './services/storage.service';
+import { OptionComponent } from './option/option.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,14 +32,12 @@ import { CartService } from './services/cart.service';
         ShowErrorsComponent,
         NavbarComponent,
         VertNavComponent,
-        TestComponent,
         ProductDetailsComponent,
         ProductAddComponent,
         ProductComponent,
         BasicElementsComponent,
-        ProfilesComponent,
         CartComponent,
-        ShoppingCartComponent,
+        OptionComponent,
     ],
     imports: [
         BrowserModule,
@@ -49,11 +47,13 @@ import { CartService } from './services/cart.service';
         DashboardModule,
         DashboardRoutingModule,
         BasicElementsModule,
+        FormsModule,
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
     ],
     providers: [
         AngularFirestore,
-        CartService
+        CartService,
+        StorageService
     ],
     bootstrap: [AppComponent]
 })
