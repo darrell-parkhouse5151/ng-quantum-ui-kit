@@ -97,7 +97,8 @@
                 <td>{{ lead.contactName }}</td>
                 <td>{{ lead.company }}</td>
                 <td>
-                    <div class="lead-status" [ngStyle]="{backgroundColor: lead.backgroundColor}">{{ lead.leadStatus }}</div>
+                    <div class="lead-status"
+                        [ngStyle]="{backgroundColor: lead.backgroundColor }">{{ lead.leadStatus }}</div>
                 </td>
                 <td>{{ lead.sales | currency: "USD": "symbol"}}</td>
                 <td>
