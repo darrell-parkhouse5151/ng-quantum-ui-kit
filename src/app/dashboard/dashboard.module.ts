@@ -6,6 +6,8 @@ import { LeadsComponent } from './leads/leads.component';
 import { AddLeadComponent } from './leads/add-lead/add-lead.component';
 import { LeadDetailsComponent } from './leads/lead-details/lead-details.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { DashboardComponent } from './dashboard.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -13,11 +15,13 @@ import { ContactsComponent } from './contacts/contacts.component';
         LeadsComponent,
         AddLeadComponent,
         LeadDetailsComponent,
-        ContactsComponent
+        ContactsComponent,
+        DashboardComponent
     ],
     imports: [
         CommonModule,
-        DashboardRoutingModule
+        DashboardRoutingModule,
+        FormsModule
     ]
 })
 
