@@ -13,5 +13,6 @@ export interface Product {
     quantity?:number
     estShipDate?:Date;
     size?:string;
+    description?:string;
 
 }
