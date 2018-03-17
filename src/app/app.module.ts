@@ -24,7 +24,36 @@ import { CartService } from './services/cart.service';
 import { StorageService } from './services/storage.service';
 import { OptionComponent } from './option/option.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { AlertsComponent } from './alerts/alerts.component';
+import { BasicElementsRoutingModule } from './basic-elements/basic-elements-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ContactsComponent } from './dashboard/contacts/contacts.component';
+import { EmailClientComponent } from './dashboard/email-client/email-client.component';
+import { LeadsComponent } from './dashboard/leads/leads.component';
 
+const appRoutes: Routes = [
+    {
+        path: 'alerts',
+        component: AlertsComponent
+    },
+    {
+        path: '',
+        component: DashboardComponent,
+    },
+    {
+        path: 'dashboard/email',
+        component: EmailClientComponent
+    },
+    {
+        path: 'dashboard/contacts',
+        component: ContactsComponent
+    },
+    {
+        path: 'dashboard/leads',
+        component: LeadsComponent
+    },
+];
 
 @NgModule({
     declarations: [
@@ -47,7 +76,9 @@ import { FormsModule } from '@angular/forms';
         DashboardModule,
         DashboardRoutingModule,
         BasicElementsModule,
+        BasicElementsRoutingModule,
         FormsModule,
+        RouterModule.forRoot(appRoutes),
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
     ],
     providers: [
