@@ -17,7 +17,6 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ServicesModule } from './services/services.module';
 import { BasicElementsComponent } from './basic-elements/basic-elements.component';
 import { BasicElementsModule } from './basic-elements/basic-elements.module';
-import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { CartComponent } from './ecommerce/cart/cart.component';
 import { CartService } from './services/cart.service';
@@ -74,7 +73,6 @@ const appRoutes: Routes = [
         HttpClientModule,
         ServicesModule,
         DashboardModule,
-        DashboardRoutingModule,
         BasicElementsModule,
         BasicElementsRoutingModule,
         FormsModule,
