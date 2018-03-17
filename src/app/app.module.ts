@@ -62,6 +62,7 @@ const appRoutes: Routes = [
         ProductComponent,
         CartComponent,
         OptionComponent,
+        AlertsComponent
     ],
     imports: [
         BrowserModule,
