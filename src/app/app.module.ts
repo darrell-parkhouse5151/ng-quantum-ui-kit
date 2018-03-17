@@ -15,8 +15,6 @@ import { ProductAddComponent } from './ecommerce/product-add/product-add.compone
 import { ProductComponent } from './ecommerce/product/product.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ServicesModule } from './services/services.module';
-import { BasicElementsComponent } from './basic-elements/basic-elements.component';
-import { BasicElementsModule } from './basic-elements/basic-elements.module';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { CartComponent } from './ecommerce/cart/cart.component';
 import { CartService } from './services/cart.service';
@@ -25,7 +23,6 @@ import { OptionComponent } from './option/option.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AlertsComponent } from './alerts/alerts.component';
-import { BasicElementsRoutingModule } from './basic-elements/basic-elements-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactsComponent } from './dashboard/contacts/contacts.component';
 import { EmailClientComponent } from './dashboard/email-client/email-client.component';
@@ -63,7 +60,6 @@ const appRoutes: Routes = [
         ProductDetailsComponent,
         ProductAddComponent,
         ProductComponent,
-        BasicElementsComponent,
         CartComponent,
         OptionComponent,
     ],
@@ -73,8 +69,6 @@ const appRoutes: Routes = [
         HttpClientModule,
         ServicesModule,
         DashboardModule,
-        BasicElementsModule,
-        BasicElementsRoutingModule,
         FormsModule,
         RouterModule.forRoot(appRoutes),
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
