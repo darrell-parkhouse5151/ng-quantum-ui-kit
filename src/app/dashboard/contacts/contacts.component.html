@@ -10,36 +10,7 @@
     <div class="header">
         <div class="btn">add contact</div>
         <div class="v-sep"></div>
-        <div class="tool-bar">
-            <div class="selector">
-                <label>
-                    <input type="checkbox">
-                    <span class="label-text"></span>
-                </label>
-                <div class="down-arrow"></div>
-            </div> <!-- selector --->
-
-            <div class="edit">
-                <div class="edit-icon"></div>
-            </div><!-- edit --->
-
-            <div class="delete">
-                <div class="delete-icon"></div>
-            </div> <!-- delete ---><
-
-            <div class="folder">
-                <div class="folder-icon"></div>
-            </div><!-- folder --->
-        </div> <!-- the tool bar --->
-
-        <div class="search">
-            <div class="search-input">
-                <input type="text" id="search-text" placeholder="Search">
-                <div class="search-icon"></div>
-            </div>
-        </div> <!-- search --->
     </div> <!-- header --->
-
     <div class="sidebar">
         <nav class="contact-categories">
             <ul class="contact-list">
@@ -51,28 +22,5 @@
         </nav>
     </div> <!-- sidebar --->
 
-    <div class="main-content">
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Contact <div class="down-chevron"></div></th>
-                    <th>Email <div class="down-chevron"></div></th>
-                    <th>Lead Title <div class="down-chevron"></div></th>
-                    <th>Company <div class="down-chevron"></div></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let contact of contacts">
-                    <td>
-                        <label>
-                            <input type="checkbox">
-                            <span class="label-text"></span>
-                        </label>
-                    </td>
-                    <td>{{ contact.contact }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="main-content"></div>
 </div><!-- contact-card --->
