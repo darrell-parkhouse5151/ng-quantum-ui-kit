@@ -12,6 +12,53 @@
         width: 100%;
         height: 88px;
         border-bottom: 2px solid $base-border-color;
+
+        .tool-bar {
+            float: left;
+            margin-left: 64px;
+            margin-top: 35px;
+
+            .tools {
+                margin: 0;
+                padding: 0;
+            }
+
+            .down-arrow {
+                background: url(../../imgs/down-arrow.png) no-repeat;
+                width: 10px;
+                height: 6px;
+
+                position: relative;
+                top: 7px;
+                left: 30px;
+            }
+
+            .tools-item {
+                list-style: none;
+                float: left;
+                display: inline-block;
+                margin-right: 20px;
+
+                &:first-child {
+                    margin-right: 20px;
+                }
+
+                &:nth-child(2) {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .search {
+            width: 219px;
+            height: 88px;
+            float: left;
+            margin-left: 30px;
+            border: {
+                left: 2px solid $base-border-color;
+                right: 2px solid $base-border-color;
+            }
+        }
     }
 
     .sidebar {
@@ -85,7 +132,9 @@
         }
     }
 }
-
+.clear {
+    clear: both;
+}
 .sidebar-v-sep {
     width: 100%;
     height: 2px;
@@ -118,4 +167,40 @@
     background: url(../../imgs/email/trash-icon.png) no-repeat;
     width: 14px;
     height: 18px;
+}
+
+.refresh-icon {
+    background: url(../../imgs/email/refresh-icon.png) no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.archive-icon {
+    background: url(../../imgs/email/archive-icon.png) no-repeat;
+    width: 18px;
+    height: 18px;
+}
+
+.spam-icon {
+    background: url(../../imgs/email/spam-icon.png) no-repeat;
+    width: 18px;
+    height: 18px;
+}
+
+.trash-icon {
+    background: url(../../imgs/email/trash-icon.png);
+    width: 14px;
+    height: 19px;
+}
+
+.folder-icon {
+    background: url(../../imgs/email/folder-icon.png) no-repeat;
+    width: 20px;
+    height: 16px;
+}
+
+.label-icon {
+    background: url(../../imgs/email/label-icon.png) no-repeat;
+    width: 19px;
+    height: 14px;
 }
