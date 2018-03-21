@@ -27,6 +27,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactsComponent } from './dashboard/contacts/contacts.component';
 import { EmailClientComponent } from './dashboard/email-client/email-client.component';
 import { LeadsComponent } from './dashboard/leads/leads.component';
+import { ShoppingCartService } from './services/shopping-cart.service';
+import { ModelFormComponent } from './model-form/model-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
     {
@@ -49,6 +52,10 @@ const appRoutes: Routes = [
         path: 'dashboard/leads',
         component: LeadsComponent
     },
+    {
+        path: 'ecommerce/cart',
+        component: CartComponent
+    }
 ];
 
 @NgModule({
@@ -62,7 +69,8 @@ const appRoutes: Routes = [
         ProductComponent,
         CartComponent,
         OptionComponent,
-        AlertsComponent
+        AlertsComponent,
+        ModelFormComponent
     ],
     imports: [
         BrowserModule,
@@ -70,6 +78,7 @@ const appRoutes: Routes = [
         HttpClientModule,
         ServicesModule,
         DashboardModule,
+        ReactiveFormsModule,
         FormsModule,
         RouterModule.forRoot(appRoutes),
         AngularFireModule.initializeApp(environment.firebaseConfig, 'ng-quantum-ui-kit')
@@ -77,7 +86,8 @@ const appRoutes: Routes = [
     providers: [
         AngularFirestore,
         CartService,
-        StorageService
+        StorageService,
+        ShoppingCartService
     ],
     bootstrap: [AppComponent]
 })
