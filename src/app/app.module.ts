@@ -70,7 +70,7 @@ const appRoutes: Routes = [
         CartComponent,
         OptionComponent,
         AlertsComponent,
-        ModelFormComponent
+        ModelFormComponent,
     ],
     imports: [
         BrowserModule,
@@ -87,7 +87,7 @@ const appRoutes: Routes = [
         AngularFirestore,
         CartService,
         StorageService,
-        ShoppingCartService
+        ShoppingCartService,
     ],
     bootstrap: [AppComponent]
 })
