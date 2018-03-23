@@ -5,6 +5,7 @@
 </ul>
 <br>
 <div class="section-title">{{ componentName }}</div>
+<div class="total-sales">Total Sales <span class="amount">{{ totalSales | currency:'USD':true}}</span></div>
 
 <div class="lead-card">
     <div class="header">
@@ -98,11 +99,17 @@
                 <td>{{ lead.company }}</td>
                 <td>
                     <div class="lead-status"
-                        [ngStyle]="{backgroundColor: lead.backgroundColor }">{{ lead.leadStatus }}</div>
+                        [ngClass]="{'initial-contact':  lead.leadStatus === 'initial-contact',
+                                    'offer-made': lead.leadStatus === 'offer-made',
+                                    'negotiation': lead.leadStatus === 'negotiation',
+                                    'won': lead.leadStatus === 'won',
+                                    'incoming-request': lead.leadStatus === 'incoming-request',
+                                    'contract': lead.leadStatus === 'contract'}">{{ lead.leadStatus }}</div>
+                    <input placeholder="" id="leadId">
                 </td>
                 <td>{{ lead.sales | currency: "USD": "symbol"}}</td>
                 <td>
-                    <a routerLink="/leads/{{lead.id}}" class="btn btn-sm">details</a>
+                    <a routerLink="/dashboard/leads/{{lead.id}}" class="btn btn-sm">details</a>
                 </td>
                 <!--<td>{{ getLeadStatus()}}</td>-->
             </tr>
