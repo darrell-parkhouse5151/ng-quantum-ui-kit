@@ -288,3 +288,44 @@ thead {
 a {
     text-decoration: none;
 }
+
+#leadId {
+    margin-left: -9999px;
+}
+
+.initial-contact {
+    background: $initial-contact-bg-color;
+}
+
+.offer-made {
+    background: $offer-made-bg-color;
+}
+
+.incoming-request {
+    background: $incoming-request-bg-color;
+}
+
+.negotiation {
+    background: $negotiations-bg-color;
+}
+
+.won {
+    background: $won-lead-bg-color;
+}
+
+.contract {
+    background: $contract-bg-color;
+}
+
+.total-sales {
+    color: #f2f2f2;
+    font-weight: 300;
+    font-size: 28px;
+    margin-top: 30px;
+
+    .amount {
+        font-weight: bold;
+        color: darken($won-lead-bg-color, 20%);
+        margin-left: 30px;
+    }
+}
