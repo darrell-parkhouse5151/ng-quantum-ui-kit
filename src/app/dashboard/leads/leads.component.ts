@@ -11,10 +11,12 @@ import { Lead } from '../../models/lead';
 })
 export class LeadsComponent implements OnInit {
     leads: Lead[];
-    lead: any;
+    lead: Lead;
 
     pageName: string = 'Leads';
     componentName: string = 'Client Leads';
+
+    totalSales: number;
 
     constructor(private leadService: LeadService) {
 
@@ -23,6 +25,14 @@ export class LeadsComponent implements OnInit {
     ngOnInit() {
         this.leadService.getLeads().subscribe(leads => {
             this.leads = leads;
+            this.getTotalSales();
         });
+    }
+
+
+    getTotalSales() {
+        this.totalSales = this.leads.reduce((total, lead) => {
+            return total + parseFloat(lead.sales.toString());
+        }, 0);
     }
 }
