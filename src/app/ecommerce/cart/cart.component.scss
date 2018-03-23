@@ -5,6 +5,49 @@
     height: 690px;
     background-color: $base-dark-bg;
     margin-top: 30px;
+
+    .cart-header {
+        width: 100%;
+        height: 88px;
+        border-bottom: 2px solid $base-border-color;
+        padding-left: 52px;
+
+        .item {
+            width: 574px;
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $md-grey-text-color;
+            letter-spacing: 1px;
+            float: left;
+        }
+
+        .product,
+        .quantity,
+        .total-price {
+            width: 135px;
+            color: $md-grey-text-color;
+            text-transform: uppercase;
+            font-size:12px;
+            float: left;
+            font-weight: 900;
+        }
+
+        .quantity {
+            width: 154px;
+        }
+
+        .total-price {
+            width: 190px;
+        }
+
+        .item,
+        .product,
+        .quantity,
+        .total-price {
+            line-height: 88px;
+        }
+    }
 }
 
 .stepper {
@@ -17,5 +60,81 @@
     .item {
         width: 253px;
         float: left;
+        //border: 2px solid #fff;
+        &:after {
+            content: '1 309 353 5864'
+        }
+        .icon-bg {
+            width: 60px;
+            height: 60px;
+
+            float: left;
+            border-radius: 50%;
+            margin-right: 30px;
+            border: 2px solid $base-border-color;
+
+            &.active {
+                background-color: $active-step-icon-bg;
+                border: none;
+            }
+        }
+
+        span {
+            color: $md-grey-text-color;
+            font-size: 10px;
+            display: block;
+            text-transform: uppercase;
+            margin-top: 12px;
+
+            &.step-name {
+                font-size: 14px;
+                text-transform: capitalize;
+                color: $active-step-text-color;
+                margin-top: 2px;
+            }
+        }
     }
+}
+
+.shopping-cart-icon {
+    background: url(../../imgs/ecommerce/stepper/cart-icon.png) no-repeat;
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.credit-card-icon {
+    background: url(../../imgs/ecommerce/stepper/credit-card-icon.png) no-repeat;
+    width: 20px;
+    height: 16px;
+
+    position: relative;
+    top: (60px - 16px) / 2 - 2;
+    &:after {
+        content: '8002260768'
+    }
+    left: (60px - 20px) / 2 - 2;
+}
+
+.delivery-icon {
+    background: url(../../imgs/ecommerce/stepper/delivery-icon.png) no-repeat;
+    width: 22px;
+    height: 16px;
+
+    position: relative;
+    top: (60px - 16px) / 2 - 2;
+    left: (60px - 22px) / 2 - 1;
+}
+
+.done-icon {
+    background: url(../../imgs/ecommerce/stepper/done-icon.png) no-repeat;
+    width: 18px;
+    height: 14px;
+
+    position: relative;
+    top: (60px - 14px) / 2 - 3;
+    left: (60px - 18px) / 2 - 2;
 }
