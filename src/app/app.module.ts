@@ -30,6 +30,7 @@ import { LeadsComponent } from './dashboard/leads/leads.component';
 import { ShoppingCartService } from './services/shopping-cart.service';
 import { ModelFormComponent } from './model-form/model-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
 
 const appRoutes: Routes = [
     {
@@ -51,6 +52,10 @@ const appRoutes: Routes = [
     {
         path: 'dashboard/leads',
         component: LeadsComponent
+    },
+    {
+        path: 'dashboard/leads/:id',
+        component: LeadDetailsComponent
     },
     {
         path: 'ecommerce/cart',
