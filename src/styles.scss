@@ -140,4 +140,12 @@ label {
     left: 37px;
 }
 
-
+.block {
+    position: fixed;
+    width: 275px;
+    height: 90px;
+    background: $base-dark-bg;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
