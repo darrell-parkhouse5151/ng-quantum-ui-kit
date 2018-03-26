@@ -31,6 +31,9 @@ import { ShoppingCartService } from './services/shopping-cart.service';
 import { ModelFormComponent } from './model-form/model-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-details.component';
+import { AuthService } from './services/auth.service';
+import { LoginComponent } from './login/login.component';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 const appRoutes: Routes = [
     {
@@ -60,6 +63,10 @@ const appRoutes: Routes = [
     {
         path: 'ecommerce/cart',
         component: CartComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     }
 ];
 
@@ -76,6 +83,7 @@ const appRoutes: Routes = [
         OptionComponent,
         AlertsComponent,
         ModelFormComponent,
+        LoginComponent,
     ],
     imports: [
         BrowserModule,
@@ -93,6 +101,8 @@ const appRoutes: Routes = [
         CartService,
         StorageService,
         ShoppingCartService,
+        AuthService,
+        AngularFireAuth
     ],
     bootstrap: [AppComponent]
 })
