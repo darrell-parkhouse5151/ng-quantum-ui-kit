@@ -61,9 +61,7 @@
         width: 253px;
         float: left;
         //border: 2px solid #fff;
-        &:after {
-            content: '1 309 353 5864'
-        }
+
         .icon-bg {
             width: 60px;
             height: 60px;
@@ -113,9 +111,6 @@
 
     position: relative;
     top: (60px - 16px) / 2 - 2;
-    &:after {
-        content: '8002260768'
-    }
     left: (60px - 20px) / 2 - 2;
 }
 
