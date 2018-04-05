@@ -34,6 +34,9 @@ import { LeadDetailsComponent } from './dashboard/leads/lead-details/lead-detail
 import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { RegisterComponent } from './register/register.component';
+import { FlashMessagesService } from 'angular2-flash-messages';
+import { EmailService } from './services/email.service';
 
 const appRoutes: Routes = [
     {
@@ -67,6 +70,10 @@ const appRoutes: Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'register',
+        component: RegisterComponent
     }
 ];
 
@@ -84,6 +91,7 @@ const appRoutes: Routes = [
         AlertsComponent,
         ModelFormComponent,
         LoginComponent,
+        RegisterComponent,
     ],
     imports: [
         BrowserModule,
@@ -102,7 +110,9 @@ const appRoutes: Routes = [
         StorageService,
         ShoppingCartService,
         AuthService,
-        AngularFireAuth
+        AngularFireAuth,
+        FlashMessagesService,
+        EmailService
     ],
     bootstrap: [AppComponent]
 })
